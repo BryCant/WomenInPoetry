@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - item_reward
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 
@@ -40,4 +41,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Far_BG
+    uniqueID: 2367376307
+    locked: 0
+  - name: Close_BG
+    uniqueID: 3974018955
+    locked: 0
+  - name: Neutral
+    uniqueID: 495043321
+    locked: 0
+  - name: Close_FG
+    uniqueID: 165635497
+    locked: 0
+  - name: Far_FG
+    uniqueID: 1326407957
     locked: 0
