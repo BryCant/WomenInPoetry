@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Cinemachine;
 
@@ -8,6 +9,7 @@ public class NavigationControls : MonoBehaviour
 {
     public Button leftNavigate;
     public Button rightNavigate;
+    public GameObject poetPicture;
 
     public GameObject followObject;
 
@@ -33,4 +35,23 @@ public class NavigationControls : MonoBehaviour
             followObject.transform.position += new Vector3(19, 0);
         }
     }
+
+    public void StartLevel()
+    {
+        switch (pageNum)
+        {
+            case 1:
+                Debug.Log("Starting Montagu Level ...");
+                SceneManager.LoadScene("Montagu");
+                break;
+            case 2:
+                Debug.Log("Starting Williams Level ...");
+                SceneManager.LoadScene("Williams");
+                break;
+            default:
+                Debug.Log("On title screen or Credit screen");
+                break;
+        }
+    }
+
 }
