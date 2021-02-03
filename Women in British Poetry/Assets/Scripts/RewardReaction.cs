@@ -31,7 +31,6 @@ public class RewardReaction : MonoBehaviour
             touchable = false;
             Destroy(other.gameObject);
             Debug.Log("lol");
-            Thread.Sleep(100);
             Debug.Log("lipop");
             if (msmsInfo.activeSelf)
             {
@@ -43,6 +42,7 @@ public class RewardReaction : MonoBehaviour
             }
             BuzzLight.intensity += .2f;
             //msmsInfo.SetActive(true);
+            touchable = true;
 
         }
     }
