@@ -8,13 +8,14 @@ using UnityEngine.UI;
 
 public class RewardReaction : MonoBehaviour
 {
+    // Scroll Bar
     public Image[] scrolls;
     public Sprite scrollEmpty;
     public Sprite scrollFull;
     private int scrollCount = 0;
 
-    public Light2D BuzzLight;
-    public GameObject msmsInfo;
+
+    public GameObject[] scrollContents;
     private bool touchable = true;
 
     private void Start()
@@ -32,28 +33,24 @@ public class RewardReaction : MonoBehaviour
             Destroy(other.gameObject);
             touchable = false;
 
-            scrollCount++;
-
-            switch (scrollCount)
-            {
-                case 1:
-                    scrolls[1].GetComponent<Image>().sprite = scrollFull;
-                    break;
-            }
-
-            if (msmsInfo.activeSelf)
-            {
-                msmsInfo.SetActive(false);
-            }
-            else
-            {
-                msmsInfo.SetActive(true);
-            }
-            BuzzLight.intensity += .2f;
-            //msmsInfo.SetActive(true);
-            touchable = true;
-
+            scrolls[scrollCount].GetComponent<Image>().sprite = scrollFull;
+            Time.timeScale = 0f;
+            scrollContents[scrollCount].SetActive(true);
+            StartCoroutine(DelayTouchable());
         }
+    }
+
+    IEnumerator DelayTouchable()
+    {
+        yield return new WaitForSeconds(1);
+        touchable = true;
+    }
+
+    public void OnContinue()
+    {
+        Time.timeScale = 1f;
+        scrollContents[scrollCount].SetActive(false);
+        scrollCount++;
     }
 
 }
