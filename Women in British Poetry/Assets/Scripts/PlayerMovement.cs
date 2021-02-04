@@ -16,20 +16,29 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool crouch = false;
     bool jump = false;
+    bool climb = false;
 
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        if (!climb)
+        {
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        }
+        else
+        {
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed * .1f;
+        }
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        Debug.Log(Mathf.Abs(horizontalMove));
+        //Debug.Log(Mathf.Abs(horizontalMove));
+
 
         // Jump Control
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
-            animator.SetBool("IsJumping", true);
+            //animator.SetBool("IsJumping", true);
         }
 
         // Crouch Control
@@ -54,5 +63,26 @@ public class PlayerMovement : MonoBehaviour
         // Updating Physics Controls
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("ladder"))
+        {
+            Debug.Log("True nao");
+            animator.SetBool("isClimbing", true);
+            climb = true;
+        }
+
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("ladder") && climb)
+        {
+            Debug.Log("False nao");
+            animator.SetBool("isClimbing", false);
+            climb = false;
+        }
     }
 }
