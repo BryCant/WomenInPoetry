@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5209179221332660417}
   - component: {fileID: 5209179221332660416}
   - component: {fileID: 5209179221332660423}
-  - component: {fileID: 5209179221332660422}
   - component: {fileID: 5209179221332660421}
   - component: {fileID: 5209179221332660420}
+  - component: {fileID: 1320168567}
   m_Layer: 0
   m_Name: Montagu
   m_TagString: Player
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c9253f91c62ae4c9407ed65507a6c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 800
+  m_JumpForce: 900
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -128,41 +128,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &5209179221332660422
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5209179221332660442}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.37023926, y: 0.30012184}
-      - {x: -0.5558262, y: -0.53459096}
-      - {x: -0.67269516, y: -1.0939674}
-      - {x: -0.66368103, y: -1.850083}
-      - {x: -0.36184645, y: -2.0796576}
-      - {x: 0.48229694, y: -2.1269507}
-      - {x: 0.20728302, y: -1.2238457}
-      - {x: 0.35644913, y: 0.28512993}
-      - {x: 0.7470951, y: 1.3463855}
-      - {x: -0.35821533, y: 1.3856782}
 --- !u!95 &5209179221332660421
 Animator:
   serializedVersion: 3
@@ -218,6 +183,22 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!70 &1320168567
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5209179221332660442}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.09}
+  m_Size: {x: 1.63, y: 3.46}
+  m_Direction: 0
 --- !u!1 &5209179221553201037
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +270,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 495043321
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7fefafc396cf0431f9ae7244816d5444, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -330,7 +311,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -518,7 +499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5209179221681301427}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11, y: -2.13, z: 0}
+  m_LocalPosition: {x: -0.98, y: -1.751, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5209179221332660418}
