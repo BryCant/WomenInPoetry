@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: bookstacktile
+  m_Name: tilemiddlethick
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 2231afba77bf245e0a88f49ac50be737, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1dec46b96c8394221a6d5f0d913cedec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

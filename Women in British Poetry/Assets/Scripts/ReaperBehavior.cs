@@ -16,8 +16,8 @@ public class ReaperBehavior : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
-        speed *= multiplyer;
+        //transform.Translate(Vector2.right * speed * Time.deltaTime);
+        //speed *= multiplyer;
 
         /*int layer_mask = LayerMask.GetMask(objectTag);
 
