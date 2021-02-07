@@ -26,6 +26,17 @@ public class RewardReaction : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(scrollContents[scrollCount].activeSelf)
+        {
+            if (Input.GetKeyDown("space") || Input.GetKeyDown("down"))
+            {
+                OnContinue();
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("scroll") && touchable)
