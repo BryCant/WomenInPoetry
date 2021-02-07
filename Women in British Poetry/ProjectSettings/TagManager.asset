@@ -7,6 +7,7 @@ TagManager:
   - scroll
   - item_reward
   - ladder
+  - death
   layers:
   - Default
   - TransparentFX
