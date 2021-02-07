@@ -115,9 +115,10 @@ GameObject:
   - component: {fileID: 4214175133512759284}
   - component: {fileID: 4214175133512759287}
   - component: {fileID: 4214175133512759286}
+  - component: {fileID: 631452273}
   m_Layer: 0
   m_Name: Reaper
-  m_TagString: Untagged
+  m_TagString: death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.1
   multiplyer: 1
+  deathAnim: {fileID: 4214175133947658965}
 --- !u!114 &4214175133512759284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +234,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!70 &631452273
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4214175133512759283}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 6.82, y: 2.66}
+  m_Direction: 1
 --- !u!1 &4214175133782301501
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,8 +291,8 @@ GameObject:
   - component: {fileID: 4214175133947658967}
   - component: {fileID: 4214175133947658970}
   - component: {fileID: 4214175133947658965}
-  - component: {fileID: 4214175133947658971}
   - component: {fileID: 4214175133947658968}
+  - component: {fileID: 1109355760}
   m_Layer: 0
   m_Name: Reaper_Graphics
   m_TagString: Player
@@ -365,22 +383,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &4214175133947658971
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4214175133947658966}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 11.86, y: 0}
-  serializedVersion: 2
-  m_Radius: 5.02
 --- !u!114 &4214175133947658968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,7 +390,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4214175133947658966}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
@@ -423,3 +425,16 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1109355760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4214175133947658966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a13aea213342745a9078bbbe1d617c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiPath: {fileID: 4214175133512759287}
