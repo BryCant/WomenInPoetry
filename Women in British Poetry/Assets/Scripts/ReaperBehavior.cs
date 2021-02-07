@@ -9,7 +9,7 @@ public class ReaperBehavior : MonoBehaviour
     public float speed;
     public float multiplyer;
 
-    //public AIPath aiPath;
+    public AIPath aiPath;
 
     private bool isFrozen = false;
     private Vector3 currPos;
@@ -27,7 +27,6 @@ public class ReaperBehavior : MonoBehaviour
         if(isFrozen)
         {
             transform.position = currPos;
-            //aiPath.enabled = false;
         }
 
         //transform.Translate(Vector2.right * speed * Time.deltaTime);

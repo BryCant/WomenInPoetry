@@ -7,7 +7,8 @@ public class PauseBehavior : MonoBehaviour
 {
     public GameObject pauseMenu;
     private bool isPaused;
-    public RewardReaction player;
+    public RewardReaction playerReward;
+    public DeathReaction playerDeath;
 
     // Start is called before the first frame update
     void Start()
@@ -31,17 +32,23 @@ public class PauseBehavior : MonoBehaviour
 
     public void OnPause()
     {
-        isPaused = true;
-        Time.timeScale = 0f;
-        pauseMenu.SetActive(true);
+        if (!playerDeath.isDed)
+        {
+            isPaused = true;
+            Time.timeScale = 0f;
+            pauseMenu.SetActive(true);
+        }
     }
 
     public void OnContinue()
     {
-        isPaused = false;
-        if(!player.isScrollShowing)
-            Time.timeScale = 1f;
-        pauseMenu.SetActive(false);
+        if (!playerDeath.isDed)
+        {
+            isPaused = false;
+            if(!playerReward.isScrollShowing)
+                Time.timeScale = 1f;
+            pauseMenu.SetActive(false);
+        }
     }
 
     public void OnSoundToggle()
