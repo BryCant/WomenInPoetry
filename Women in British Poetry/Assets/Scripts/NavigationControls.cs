@@ -7,14 +7,39 @@ using Cinemachine;
 
 public class NavigationControls : MonoBehaviour
 {
-    public Button leftNavigate;
-    public Button rightNavigate;
+    public GameObject leftNavigate;
+    public GameObject rightNavigate;
     public GameObject poetPicture;
 
     public GameObject followObject;
 
     private int pageNum = 0;
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
+
+    private void Update()
+    {
+        if (pageNum > -1)
+        {
+            leftNavigate.SetActive(true);
+        }
+        else
+        {
+            leftNavigate.SetActive(false);
+        }
+
+        if (pageNum < 2)
+        {
+            rightNavigate.SetActive(true);
+        }
+        else
+        {
+            rightNavigate.SetActive(false);
+        }
+    }
 
     public void MoveCamLeft()
     {

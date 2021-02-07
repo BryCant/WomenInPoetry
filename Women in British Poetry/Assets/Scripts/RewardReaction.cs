@@ -13,6 +13,7 @@ public class RewardReaction : MonoBehaviour
     public Sprite scrollEmpty;
     public Sprite scrollFull;
     private int scrollCount = 0;
+    public bool isScrollShowing;
 
 
     public GameObject[] scrollContents;
@@ -24,13 +25,14 @@ public class RewardReaction : MonoBehaviour
         {
             scroll.GetComponent<Image>().sprite = scrollEmpty;
         }
+        isScrollShowing = false;
     }
 
     private void Update()
     {
         if(scrollContents[scrollCount].activeSelf)
         {
-            if (Input.GetKeyDown("space") || Input.GetKeyDown("down"))
+            if (Input.GetKeyDown("space"))
             {
                 OnContinue();
             }
@@ -41,6 +43,7 @@ public class RewardReaction : MonoBehaviour
     {
         if (other.gameObject.CompareTag("scroll") && touchable)
         {
+            isScrollShowing = true;
             Destroy(other.gameObject);
             touchable = false;
 
@@ -62,6 +65,7 @@ public class RewardReaction : MonoBehaviour
         Time.timeScale = 1f;
         scrollContents[scrollCount].SetActive(false);
         scrollCount++;
+        isScrollShowing = false;
     }
 
 }

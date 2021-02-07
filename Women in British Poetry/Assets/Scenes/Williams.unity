@@ -1528,7 +1528,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 508566921}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1854726875}
+        m_MethodName: OnExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &535193941 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 480050463558402448, guid: e5efe551afb49094caf20a72fadfa989,
@@ -6707,7 +6718,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1854726874
 RectTransform:
@@ -6742,6 +6753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1638803012}
+  player: {fileID: 1963554640}
 --- !u!1 &1857663323
 GameObject:
   m_ObjectHideFlags: 0

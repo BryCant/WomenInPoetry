@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseBehavior : MonoBehaviour
 {
     public GameObject pauseMenu;
     private bool isPaused;
+    public RewardReaction player;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +39,8 @@ public class PauseBehavior : MonoBehaviour
     public void OnContinue()
     {
         isPaused = false;
-        Time.timeScale = 1f;
+        if(!player.isScrollShowing)
+            Time.timeScale = 1f;
         pauseMenu.SetActive(false);
     }
 
@@ -48,6 +51,6 @@ public class PauseBehavior : MonoBehaviour
 
     public void OnExit()
     {
-
+        SceneManager.LoadScene("Gallery");
     }
 }
