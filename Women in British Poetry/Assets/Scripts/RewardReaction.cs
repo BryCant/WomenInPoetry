@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -18,6 +19,7 @@ public class RewardReaction : MonoBehaviour
 
     public GameObject[] scrollContents;
     private bool touchable = true;
+    public string finalScreenName;
 
     private void Start()
     {
@@ -66,6 +68,17 @@ public class RewardReaction : MonoBehaviour
         scrollContents[scrollCount].SetActive(false);
         scrollCount++;
         isScrollShowing = false;
+        if(scrollCount == 5)
+        {
+            StartCoroutine(EndGame());
+        }
+
+    }
+
+    IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(finalScreenName);
     }
 
 }
