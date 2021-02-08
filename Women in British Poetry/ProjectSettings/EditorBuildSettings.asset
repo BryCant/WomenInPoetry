@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Williams.unity
     guid: e88e789ef5143f3489c509ad834056a7
+  - enabled: 1
+    path: Assets/Scenes/MontaguFinal.unity
+    guid: 200ada055735d07479b2f7e9660a9520
+  - enabled: 1
+    path: Assets/Scenes/WilliamsFinal.unity
+    guid: 535cd6d648af9e64c809aa9f0b0f72a0
   m_configObjects: {}

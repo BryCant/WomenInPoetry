@@ -21360,6 +21360,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 04a3c9b90f7b54b78b53580749f964d1,
         type: 3}
+    - target: {fileID: 3207884581623994007, guid: b9d41df0ebabcde45b2dd5dd0cda3d53,
+        type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1022166611}
     - target: {fileID: 3207884581623994010, guid: b9d41df0ebabcde45b2dd5dd0cda3d53,
         type: 3}
       propertyPath: m_Name
@@ -27283,6 +27288,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29b36991bdff276498096601c185c079, type: 3}
+--- !u!1 &4214175132974830211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4214175133512759283, guid: 29b36991bdff276498096601c185c079,
+    type: 3}
+  m_PrefabInstance: {fileID: 4214175132974830210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!60 &4450716311106373867
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -28922,6 +28933,16 @@ PrefabInstance:
       propertyPath: scrollContents.Array.data[9]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9182129936706522822, guid: e9ee239179aabef4e97d380c5b492827,
+        type: 3}
+      propertyPath: finalScreenName
+      value: WilliamsFinal
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182129936706522822, guid: e9ee239179aabef4e97d380c5b492827,
+        type: 3}
+      propertyPath: death
+      value: 
+      objectReference: {fileID: 4214175132974830211}
     - target: {fileID: 9182129936706522840, guid: e9ee239179aabef4e97d380c5b492827,
         type: 3}
       propertyPath: m_Name
