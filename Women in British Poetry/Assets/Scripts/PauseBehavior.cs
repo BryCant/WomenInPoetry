@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseBehavior : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class PauseBehavior : MonoBehaviour
     private bool isPaused;
     public RewardReaction playerReward;
     public DeathReaction playerDeath;
+    
+    public Button soundBtn;
+    public bool isSoundOn = true;
+    public Sprite soundOn;
+    public Sprite soundOff;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +59,16 @@ public class PauseBehavior : MonoBehaviour
 
     public void OnSoundToggle()
     {
-
+        if (isSoundOn)
+        {
+            soundBtn.GetComponent<Image>().sprite = soundOff;
+            isSoundOn = false;
+        }
+        else
+        {
+            soundBtn.GetComponent<Image>().sprite = soundOn;
+            isSoundOn = true;
+        }
     }
 
     public void OnExit()
