@@ -20655,6 +20655,23 @@ PrefabInstance:
       propertyPath: playerDeath
       value: 
       objectReference: {fileID: 431059328}
+    - target: {fileID: 3207884581623994007, guid: b9d41df0ebabcde45b2dd5dd0cda3d53,
+        type: 3}
+      propertyPath: soundBtn
+      value: 
+      objectReference: {fileID: 3207884579988468813}
+    - target: {fileID: 3207884581623994007, guid: b9d41df0ebabcde45b2dd5dd0cda3d53,
+        type: 3}
+      propertyPath: soundOn
+      value: 
+      objectReference: {fileID: 21300000, guid: a19383eab7866432caef0e121a3ce0ed,
+        type: 3}
+    - target: {fileID: 3207884581623994007, guid: b9d41df0ebabcde45b2dd5dd0cda3d53,
+        type: 3}
+      propertyPath: soundOff
+      value: 
+      objectReference: {fileID: 21300000, guid: 04a3c9b90f7b54b78b53580749f964d1,
+        type: 3}
     - target: {fileID: 3207884581623994010, guid: b9d41df0ebabcde45b2dd5dd0cda3d53,
         type: 3}
       propertyPath: m_Name
@@ -20662,6 +20679,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d41df0ebabcde45b2dd5dd0cda3d53, type: 3}
+--- !u!114 &3207884579988468813 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3207884580134914414, guid: b9d41df0ebabcde45b2dd5dd0cda3d53,
+    type: 3}
+  m_PrefabInstance: {fileID: 3207884579988468812}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!483693784 &3809559108023039109
 TilemapRenderer:
   m_ObjectHideFlags: 0
