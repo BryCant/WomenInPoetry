@@ -6123,6 +6123,12 @@ PrefabInstance:
       objectReference: {fileID: 5209179223296075669}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29b36991bdff276498096601c185c079, type: 3}
+--- !u!1 &364497454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4214175133512759283, guid: 29b36991bdff276498096601c185c079,
+    type: 3}
+  m_PrefabInstance: {fileID: 364497453}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &380690198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9171,6 +9177,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 04a3c9b90f7b54b78b53580749f964d1,
         type: 3}
+    - target: {fileID: 3207884581623994007, guid: b9d41df0ebabcde45b2dd5dd0cda3d53,
+        type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1392429673}
     - target: {fileID: 3207884581623994010, guid: b9d41df0ebabcde45b2dd5dd0cda3d53,
         type: 3}
       propertyPath: m_Name
@@ -18805,6 +18816,11 @@ PrefabInstance:
       propertyPath: finalScreenName
       value: MontaguFinal
       objectReference: {fileID: 0}
+    - target: {fileID: 5209179221332660420, guid: 2c9b73200331bf347aaafb6afea3de17,
+        type: 3}
+      propertyPath: death
+      value: 
+      objectReference: {fileID: 364497454}
     - target: {fileID: 5209179221332660442, guid: 2c9b73200331bf347aaafb6afea3de17,
         type: 3}
       propertyPath: m_Name

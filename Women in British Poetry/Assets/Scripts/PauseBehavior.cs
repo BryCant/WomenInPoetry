@@ -16,6 +16,8 @@ public class PauseBehavior : MonoBehaviour
     public Sprite soundOn;
     public Sprite soundOff;
 
+    public GameObject sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,11 +63,13 @@ public class PauseBehavior : MonoBehaviour
     {
         if (isSoundOn)
         {
+            sound.SetActive(false);
             soundBtn.GetComponent<Image>().sprite = soundOff;
             isSoundOn = false;
         }
         else
         {
+            sound.SetActive(true);
             soundBtn.GetComponent<Image>().sprite = soundOn;
             isSoundOn = true;
         }

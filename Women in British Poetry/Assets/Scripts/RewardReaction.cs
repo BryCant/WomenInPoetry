@@ -20,6 +20,7 @@ public class RewardReaction : MonoBehaviour
     public GameObject[] scrollContents;
     private bool touchable = true;
     public string finalScreenName;
+    public GameObject death;
 
     private void Start()
     {
@@ -70,6 +71,7 @@ public class RewardReaction : MonoBehaviour
         isScrollShowing = false;
         if(scrollCount == 5)
         {
+            Destroy(death);
             StartCoroutine(EndGame());
         }
 
@@ -77,7 +79,7 @@ public class RewardReaction : MonoBehaviour
 
     IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene(finalScreenName);
     }
 
